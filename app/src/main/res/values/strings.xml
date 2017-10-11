@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MealPicker</string>
+    <string name="defaultFood">Chinese</string>
+    <string name="decideBtn">Decide!</string>
+    <string name="add_new_food">add new food...</string>
+    <string name="add_place">Add Place</string>
+    <string name="image_logo_description">The default logo for the app</string>
 </resources>
