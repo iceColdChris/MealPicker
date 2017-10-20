@@ -7,6 +7,16 @@
     android:background="@color/colorAccent"
     tools:context="com.cfahlin.mealpicker.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
     <TextView
         android:id="@+id/selectedFoodText"
         android:layout_width="wrap_content"
@@ -28,12 +38,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/image_logo_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dd_logo"
-        android:contentDescription="@string/image_logo_description" />
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:srcCompat="@drawable/dd_logo" />
 
     <Button
         android:id="@+id/decideButton"
@@ -48,7 +58,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:filterTouchesWhenObscured="true" />
 
     <EditText
         android:id="@+id/addFoodText"
@@ -78,6 +89,7 @@
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/decideButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:filterTouchesWhenObscured="true" />
 
 </android.support.constraint.ConstraintLayout>
