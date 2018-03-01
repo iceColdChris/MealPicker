@@ -3,15 +3,8 @@
 
 ### Android ###
 # Built application files
-*.apk
-*.ap_
-
 # Files for the ART/Dalvik VM
-*.dex
-
 # Java class files
-*.class
-
 # Generated files
 bin/
 gen/
@@ -67,8 +60,6 @@ gen-external-apklibs
 # Generated files
 
 # Gradle files
-.gradle
-
 # Signing files
 .signing/
 
@@ -79,7 +70,6 @@ gen-external-apklibs
 # Log Files
 
 # Android Studio
-/*/build/
 /*/local.properties
 /*/out
 /*/*/build
@@ -93,14 +83,11 @@ gen-external-apklibs
 # External native build folder generated in Android Studio 2.2 and later
 
 # NDK
-obj/
-
 # IntelliJ IDEA
 *.iws
 /out/
 
 # User-specific configurations
-.idea/libraries/
 .idea/.name
 .idea/compiler.xml
 .idea/copyright/profiles_settings.xml
@@ -204,14 +191,10 @@ $RECYCLE.BIN/
 *.lnk
 
 ### Gradle ###
-**/build/
-
 # Ignore Gradle GUI config
 gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
 # Cache of project
 .gradletasknamecache
 

@@ -63,7 +63,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         mMap.isMyLocationEnabled = true
-        var location = mLocationManager.getLastKnownLocation(provider)
+        val location = mLocationManager.getLastKnownLocation(provider)
         val latitude = location.latitude
         val longitude = location.longitude
         val latLng = LatLng(latitude, longitude)
