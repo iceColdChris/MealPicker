@@ -1,6 +1,11 @@
-sudo: false
+sudo: required
 language: android
 jdk: oraclejdk8
+
+addons:
+  apt:
+    packages:
+      - lynx
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -31,6 +36,7 @@ before_install:
     - yes | sdkmanager "platforms;android-27"
     - chmod +x gradlew
 before_script:
+    - ./gradlew assembleDebug assembleDebugAndroidTest
     - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
     - emulator -avd test -no-skin -no-audio -no-window &
     - android-wait-for-emulator
@@ -39,3 +45,6 @@ before_script:
 script:
     - ./gradlew clean
     - ./gradlew check
+
+after_failure:
+  - if [ -f /home/travis/build/iceColdChris/MealPicker/app/build/reports/lint-results.html ]; then lynx -dump /home/travis/build/iceColdChris/MealPicker/app/build/reports/lint-results.html; fi
