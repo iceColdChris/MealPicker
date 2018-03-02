@@ -2,6 +2,10 @@ sudo: required
 language: android
 jdk: oraclejdk8
 
+addons:
+  apt:
+    packages:
+      - lynx
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -48,4 +52,5 @@ script:
 after_success:
     - codecov                       #Run codecov
 
-after_failure: "cat $TRAVIS_BUILD_DIR/app/build/outputs/lint-results-debug.xml"
+after_failure:
+    - if [ -f //home/travis/build/iceColdChris/MealPicker/app/build/reports/tests/testDebugUnitTest/index.html ]; then lynx -dump //home/travis/build/iceColdChris/MealPicker/app/build/reports/tests/testDebugUnitTest/index.html; fi
