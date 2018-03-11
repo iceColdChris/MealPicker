@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.kt3k.coveralls'
 
 
@@ -37,8 +38,16 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-maps:11.8.0'
     implementation 'com.google.android.gms:play-services-places:11.8.0'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
-    implementation 'com.reqica.drilon:android-permission-check-library:2.0.0'
+
+    implementation('com.github.hotchemi:permissionsdispatcher:3.1.0') {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
+
+    implementation 'io.nlopez.smartlocation:library:3.3.3'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {

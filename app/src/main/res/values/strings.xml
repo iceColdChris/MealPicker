@@ -8,4 +8,9 @@
     <string name="title_activity_maps">Nearby</string>
     <string name="action_settings">Settings</string>
     <string name="action_map">Map</string>
+    <string name="permission_location_denied">Location permissions were denied. Please consider granting it in order to access the full functionality of this app!</string>
+    <string name="permission_location_never_ask_again">Location permissions were denied with never ask again. The app will be missing some functionality.</string>
+    <string name="permission_location_rationale">Location permissions are needed to find nearby places to eat.</string>
+    <string name="button_allow">Allow</string>
+    <string name="button_deny">Deny</string>
 </resources>

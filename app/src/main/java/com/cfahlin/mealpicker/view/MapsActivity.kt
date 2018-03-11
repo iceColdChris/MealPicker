@@ -1,4 +1,4 @@
-package com.cfahlin.mealpicker
+package com.cfahlin.mealpicker.view
 
 import android.content.Context
 import android.content.Intent
@@ -12,6 +12,7 @@ import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.cfahlin.mealpicker.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
