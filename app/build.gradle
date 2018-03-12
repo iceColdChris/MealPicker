@@ -64,6 +64,7 @@ dependencies {
     kapt "com.ryanharter.auto.value:auto-value-moshi:$autoValueMoshiVersion"
     compileOnly "com.ryanharter.auto.value:auto-value-moshi-annotations:$autoValueMoshiVersion"
 
+    annotationProcessor "com.google.auto.value:auto-value:$autoValueVersion"
     kapt "com.google.auto.value:auto-value:$autoValueVersion"
     compileOnly "com.google.auto.value:auto-value:$autoValueVersion"
 
@@ -72,6 +73,9 @@ dependencies {
     implementation "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion"
 
     implementation "com.bluelinelabs:conductor:$conductorVersion"
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    kapt 'com.jakewharton:butterknife-compiler:8.8.1'
 
     implementation "com.jakewharton.threetenabp:threetenabp:$threeTenAbpVersion"
 
