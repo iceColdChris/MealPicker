@@ -21,7 +21,36 @@ allprojects {
         google()
         jcenter()
         maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+        maven {
+            url "http://dl.bintray.com/jaimiew/whijai"
+        }
     }
+}
+
+ext {
+    compuleSdkVersion = 27
+    buildToolsVersion = '27.0.3'
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    supportLibraryVersion = '27.1.0'
+    daggerVersion = '2.14.1'
+    retrofitVersion = '2.3.0'
+    moshiVersion = '1.5.0'
+    autoValueVersion = '1.5.1'
+    autoValueMoshiVersion = '0.4.3'
+    rxJavaVersion = '2.1.9'
+    rxAndroidVersion = '2.0.2'
+    rxRelayVersion = '2.0.0'
+    rxKotlinVersion = '2.2.0'
+    conductorVersion = '2.1.4'
+    threeTenAbpVersion='1.0.5'
+    timberVersion = '4.6.1'
+    mockitoVersion = '2.10.0'
+    glideVersion = '4.2.0'
+    googlePlayServicesVersion = '11.8.0'
+    permissionDispatcherVersion = '3.1.0'
+    smartLocationVersion = '3.3.3'
+
 }
 
 task clean(type: Delete) {

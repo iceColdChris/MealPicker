@@ -31,29 +31,60 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:27.1.0'
-    implementation "com.android.support:support-v4:27.1.0"
-    implementation "com.android.support:support-media-compat:27.1.0"
+    implementation 'androidx.core:core-ktx:0.2'
+
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
+    implementation "com.android.support:support-media-compat:$supportLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    implementation 'com.google.android.gms:play-services-maps:11.8.0'
-    implementation 'com.google.android.gms:play-services-places:11.8.0'
-    implementation 'com.google.android.gms:play-services-location:11.8.0'
+    implementation "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
+    implementation "com.google.android.gms:play-services-places:$googlePlayServicesVersion"
+    implementation "com.google.android.gms:play-services-location:$googlePlayServicesVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
 
-    implementation('com.github.hotchemi:permissionsdispatcher:3.1.0') {
+    implementation("com.github.hotchemi:permissionsdispatcher:$permissionDispatcherVersion") {
         // if you don't use android.app.Fragment you can exclude support for them
         exclude module: "support-v13"
     }
-    kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
+    kapt "com.github.hotchemi:permissionsdispatcher-processor:$permissionDispatcherVersion"
 
-    implementation 'io.nlopez.smartlocation:library:3.3.3'
+    implementation "io.nlopez.smartlocation:library:$smartLocationVersion"
 
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+
+    kapt "com.ryanharter.auto.value:auto-value-moshi:$autoValueMoshiVersion"
+    compileOnly "com.ryanharter.auto.value:auto-value-moshi-annotations:$autoValueMoshiVersion"
+
+    kapt "com.google.auto.value:auto-value:$autoValueVersion"
+    compileOnly "com.google.auto.value:auto-value:$autoValueVersion"
+
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion"
+
+    implementation "com.bluelinelabs:conductor:$conductorVersion"
+
+    implementation "com.jakewharton.threetenabp:threetenabp:$threeTenAbpVersion"
+
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
 
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$daggerVersion"
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
 
 coveralls {
