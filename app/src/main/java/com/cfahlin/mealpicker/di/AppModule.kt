@@ -59,7 +59,7 @@ class AppModule {
     @Singleton
     fun provideApiService(gson: Gson, okHttpClient: OkHttpClient): ApiService {
         return Retrofit.Builder()
-                .baseUrl("http://ip.jsontest.com/")
+                .baseUrl("https://maps.googleapis.com/maps/api/place/nearbysearch/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)
