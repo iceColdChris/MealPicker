@@ -46,7 +46,7 @@ ext {
     rxAndroidVersion = '2.0.2'
     rxRelayVersion = '2.0.0'
     rxKotlinVersion = '2.2.0'
-    conductorVersion = '2.1.4'
+    conductorVersion = '2.1.5'
     threeTenAbpVersion='1.0.5'
     timberVersion = '4.6.1'
     mockitoVersion = '2.10.0'
